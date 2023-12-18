@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+
+  # POSTGRES DEFINITION
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=todo_app
+      - POSTGRES_USER=user1
+      - POSTGRES_PASSWORD=pass2
+    ports:
+      - "5436:5432"
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+    networks:
+      todo-app-network:
+
+  pgadmin:
+    image: dpage/pgadmin4:6.4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 1
+      PGADMIN_LISTEN_PORT: 80
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "8085:80"
+    networks:
+      decision-engine-network:
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+
+networks:
+  todo-app-network:
+volumes:
+  postgres:
+  pgadmin:
+
