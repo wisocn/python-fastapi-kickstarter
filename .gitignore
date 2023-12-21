@@ -41,7 +41,7 @@ pip-delete-this-directory.txt
 /.idea
 
 # direnv
-/.direnvn
+/.direnv
 
 # Unit test / coverage reports
 htmlcov/
