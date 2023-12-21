@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "your-flask-app"
+version = "0.1.0"
+description = "A simple Flask application"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^2.0"
+
+[tool.poetry.dev-dependencies]
+# Add any development dependencies here, such as testing libraries
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

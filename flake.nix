@@ -13,14 +13,14 @@
           };
         };
 
-        erlpkgs = pkgs.beam.packages.erlangR26;
         node = pkgs.nodejs-18_x;
       in
       {
         devShell = pkgs.mkShell {
-          buildInputs = with erlpkgs; [
+          buildInputs = [
             pkgs.act
             pkgs.just
+            pkgs.poetry
             pkgs.python311
           ];
         };

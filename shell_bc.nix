@@ -6,6 +6,7 @@ pkgs.mkShell {
       ps.flask
     ]))
 
+    pkgs.just
     pkgs.curl
     pkgs.jq
   ];
