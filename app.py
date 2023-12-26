@@ -10,6 +10,18 @@ def hello():
         "message": "Hello, Nix!"
     }
 
+@app.route("/live")
+def live():
+    return {
+        "message": "Hello, Nix!"
+    }
+
+@app.route("/ready")
+def ready():
+    return {
+        "message": "Hello, Nix!"
+    }
+
 def run():
     app.run(host="0.0.0.0", port=5000)
 
