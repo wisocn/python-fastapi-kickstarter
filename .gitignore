@@ -39,6 +39,7 @@ pip-delete-this-directory.txt
 
 # IntellJ 
 /.idea
+.DS_Store
 
 # direnv
 /.direnv
