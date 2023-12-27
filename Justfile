@@ -1,3 +1,6 @@
+# Strict mode
+set shell := ["bash", "-euo", "pipefail", "-c"]
+
 run: build
 	docker-compose up -d
 
