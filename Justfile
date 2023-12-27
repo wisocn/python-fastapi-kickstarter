@@ -1,9 +1,12 @@
-run: prepare
-	flask run -p 5000
-
-prepare:
+run: build
 	docker-compose up -d
 
 build:
 	poetry install
 	poetry lock
+
+teardown:
+	docker-compose down
+
+request-api:
+	curl localhost | jq .
