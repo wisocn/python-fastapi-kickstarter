@@ -23,4 +23,4 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY /app ./app
 
-ENTRYPOINT ["python", "-m", "app.app"]
+ENTRYPOINT ["python", "-m", "app.run"]

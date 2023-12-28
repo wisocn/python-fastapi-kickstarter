@@ -4,6 +4,7 @@ services:
  
   api-server:
     build: .
+    image: "api:test-vid-now"
     networks:
       api_network:
 
