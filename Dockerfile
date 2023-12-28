@@ -21,6 +21,6 @@ ENV VIRTUAL_ENV=/app/.venv \
 
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
-COPY /app ./app
+COPY /api ./api
 
-ENTRYPOINT ["python", "-m", "app.run"]
+ENTRYPOINT ["uvicorn", "api.main:app"]
