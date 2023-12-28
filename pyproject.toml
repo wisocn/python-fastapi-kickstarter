@@ -1,14 +1,18 @@
 [tool.poetry]
-name        =  "your-flask-app"
+name        =  "your-fast-app"
 version     =  "0.1.0"
-description =  "A simple Flask application"
+description =  "A simple fast application"
 authors     =  ["Your Name <your.email@example.com>"]
 
 [tool.poetry.dependencies]
-python        = "^3.8"
-flask         = "^2.0"
-python-dotenv = "1.0.0"
-
+python          = "^3.9"
+fastapi         = "^0.108.0"
+uvicorn         = "^0.25.0"
+python-dotenv   = "^1.0.0"
+pre-commit      = "3.6.0"
+pylint          = "3.0.3"
+testcontainers  = "3.7.1"
+bcrypt          = "4.1.2"
 
 [tool.poetry.dev-dependencies]
 # Add any development dependencies here, such as testing libraries
