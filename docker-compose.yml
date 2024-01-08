@@ -4,9 +4,11 @@ services:
  
   api-server:
     build: .
-    image: api:server:test
+    image: api-server:${GIT_SHA:-latest}
     networks:
       api_network:
+    ports:
+      - "8000:8000"
 
   nginx:
     image: nginx:1.25.3

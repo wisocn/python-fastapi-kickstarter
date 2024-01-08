@@ -23,4 +23,4 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY /api ./api
 
-ENTRYPOINT ["uvicorn", "api.main:app"]
+ENTRYPOINT ["uvicorn", "api.main:app", "--host", "0.0.0.0"]

@@ -8,7 +8,10 @@ default:
 	@ just --list --unsorted
 
 run: build
-	docker-compose up -d
+	docker-compose up -d 
+
+run-local: build
+	uvicorn api.main:app
 
 build:
 	poetry install --no-root
@@ -16,6 +19,9 @@ build:
 
 teardown:
 	docker-compose down
+
+cleanup:
+	docker image prune --all
 
 request-api:
 	curl localhost | jq .
