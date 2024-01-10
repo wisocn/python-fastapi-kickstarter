@@ -7,8 +7,6 @@ services:
     image: api-server:${GIT_SHA:-latest}
     networks:
       api_network:
-    ports:
-      - "8000:8000"
 
   nginx:
     image: nginx:1.25.3
@@ -26,8 +24,6 @@ services:
       - POSTGRES_DB=todo_app
       - POSTGRES_USER=user1
       - POSTGRES_PASSWORD=pass2
-    ports:
-      - "5436:5432"
     deploy:
       resources:
         limits:
@@ -37,7 +33,7 @@ services:
 
 
   pgadmin:
-    image: dpage/pgadmin4:6.4
+    image: dpage/pgadmin4:8.0
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: 1

@@ -8,11 +8,23 @@ authors     =  ["Your Name <your.email@example.com>"]
 python          = "^3.9"
 fastapi         = "^0.108.0"
 uvicorn         = {extras = ["standard"], version = "^0.25.0"}
+
+# configuration
 python-dotenv   = "^1.0.0"
+
+# linters
 pre-commit      = "3.6.0"
 pylint          = "3.0.3"
+
+# testing 
 testcontainers  = "3.7.1"
+ 
+# security
 bcrypt          = "4.1.2"
+
+# data
+sqlalchemy      = "2.0.25"
+alembic         = "1.13.1"
 
 [tool.poetry.dev-dependencies]
 # Add any development dependencies here, such as testing libraries
