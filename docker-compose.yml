@@ -7,6 +7,9 @@ services:
     image: api-server:${GIT_SHA:-latest}
     networks:
       api_network:
+    environment:
+      DATABASE_URL: 'postgresql+asyncpg://user1:pass2@postgres:5432/todo_app'  
+
 
   nginx:
     image: nginx:1.25.3

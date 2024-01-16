@@ -23,8 +23,10 @@ testcontainers  = "3.7.1"
 bcrypt          = "4.1.2"
 
 # data
-sqlalchemy      = "2.0.25"
 alembic         = "1.13.1"
+# automatically installs also sqlalchemy and pydantic
+sqlmodel        = "0.0.8"
+asyncpg         = "0.28.0"
 
 [tool.poetry.dev-dependencies]
 # Add any development dependencies here, such as testing libraries
